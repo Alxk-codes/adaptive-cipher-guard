@@ -1,73 +1,114 @@
-# Welcome to your Lovable project
+Adaptive Cipher Guard
 
-## Project info
+Adaptive Moving Target Encryption for Secure Cloud File Storage (Quantum Aware)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Overview
 
-## How can I edit this code?
+Adaptive Cipher Guard is a demonstration platform that explores adaptive cryptographic defense in a cloud storage environment.
 
-There are several ways of editing your application.
+The system behaves like a simplified cloud file locker where uploaded files are encrypted before storage. Instead of using fixed encryption, the platform monitors behavioral activity and dynamically adjusts encryption strength when suspicious patterns are detected.
 
-**Use Lovable**
+The objective of the project is to demonstrate how Moving Target Defense principles can improve security by preventing attackers from relying on a stable cryptographic environment.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+This project is developed as a final practical implementation focused on applied cybersecurity concepts.
 
-Changes made via Lovable will be committed automatically to this repo.
+Core Idea
 
-**Use your preferred IDE**
+Traditional storage systems use static encryption. Once attackers understand the encryption setup, repeated attacks target the same structure.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This system introduces adaptive encryption:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Files start with AES 128 encryption.
 
-Follow these steps:
+User behavior and access patterns are monitored.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+A machine learning model evaluates threat levels.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Encryption parameters automatically change when risk increases.
 
-# Step 3: Install the necessary dependencies.
-npm i
+Files are re encrypted and keys rotated during attacks.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+The attacker’s progress is invalidated whenever the system adapts.
 
-**Edit a file directly in GitHub**
+Features
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+User authentication system
 
-**Use GitHub Codespaces**
+Secure file upload and download
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Automatic AES encryption before storage
 
-## What technologies are used for this project?
+Behavioral activity logging
 
-This project is built with:
+Machine learning based threat detection
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Adaptive encryption upgrade
 
-## How can I deploy this project?
+Automatic key rotation
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Attack simulation module
 
-## Can I connect a custom domain to my Lovable project?
+Security event logging dashboard
 
-Yes, you can!
+Threat Model
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+The project simulates adversarial behavior rather than using real external attackers.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Threat scenarios include:
+
+Repeated wrong key attempts (brute force simulation)
+
+Abnormal access frequency (replay behavior)
+
+Accelerated attack attempts representing quantum aware threats
+
+Threat levels:
+
+Normal
+Suspicious
+Attack
+
+System response escalates automatically based on detected behavior.
+
+Technology Stack
+
+Backend
+Python
+Flask
+
+Security
+PyCryptodome (AES Encryption)
+
+Machine Learning
+Scikit learn
+
+Database
+SQLite
+
+Frontend
+HTML
+CSS
+JavaScript
+
+Visualization
+Matplotlib
+
+System Workflow
+
+User logs into the system.
+
+File is uploaded.
+
+File is encrypted using AES 128.
+
+Behavioral logs are recorded.
+
+ML model evaluates activity patterns.
+
+Threat level is determined.
+
+Encryption adapts if required.
+
+Files are re encrypted and keys rotated.
+
+Security events are logged for analysis.
