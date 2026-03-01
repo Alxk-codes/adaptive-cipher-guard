@@ -1,9 +1,3 @@
-You’re right. What you pasted reads like plain notes, not a properly structured README.
-
-Below is a clean, professional, properly formatted Markdown version. You can paste this directly into `README.md`.
-
----
-
 # Adaptive Cipher Guard
 
 **Adaptive Moving Target Encryption for Secure Cloud File Storage (Quantum Aware)**
